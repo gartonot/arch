@@ -1,0 +1,64 @@
+:root {
+  // Colors
+  --color-black: #151F46;
+  --color-gray-light: #F7F8FA;
+  --color-secondary-light: #CBCED8;
+  --color-gray: #F6F8FC;
+  --color-info: #4285F4;
+  --color-error: #D80027;
+  --color-success: #00B300;
+  --color-primary: #2E3F7F;
+  --color-primary-dark: #22326F;
+  --color-secondary-dark: #8394A7;
+  --color-gray-dark: #E6EEF5;
+  --color-secondary: #B3C1D1;
+  --color-primary-light: #3D5097;
+  --color-skyblue-lighter: #C6DAFC;
+  --color-gold: #FBBC04;
+  --color-primary-lighter: #4E60A4;
+  --color-skyblue: #00C7D3;
+  --color-pink: #F953C6;
+  --color-pink-dark: #B91D73;
+  --color-teal-light: #20B2AA;
+  --color-error-light: #FEF7F9;
+  --color-white: #FFFFFF;
+
+  --gradient-primary: linear-gradient(180deg, var(--color-primary-lighter) 0%, var(--color-primary) 100%);
+
+  // Fonts
+  --font-family-primary:  'TT Norms', sans-serif;
+
+  // Grid
+  --container-width: 1200px;
+  --container-padding-x: 15px;
+
+  // Elements size
+  --link-header-height: 0px;
+  --header-content-height: 70px;
+  --footer-menu-content-height: 70px;
+  --tab-bar-order-content-height: 60px;
+  --header-height: calc(var(--link-header-height) + var(--header-content-height) + 1px);
+
+  @include media-tablet {
+    --link-header-height: 35px;
+    --header-content-height: 60px;
+  }
+
+  //  z-index
+  $zIndex:(
+    0: 0,
+    10: 10,
+    100: 100,
+    500: 500,
+    1000: 1000,
+  );
+
+  @each $key, $value in $zIndex {
+    --z-index-#{$key}: #{$value};
+  }
+}
+
+:export {
+  colorPrimary: var(--color-primary);
+  colorBlack: var(--color-black);
+}
